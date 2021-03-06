@@ -21,9 +21,7 @@ const Update = ({ user, token }) => {
   }, []);
 
   const fetchData = async () => {
-    const response = await axios.get(
-      `http://localhost:8000/api/category/${slug}`
-    );
+    const response = await axios.get(`/api/category/${slug}`);
 
     // info.url = response.data.image.url;
     setOldCat(response.data);
@@ -81,16 +79,12 @@ const Update = ({ user, token }) => {
     setState({ ...state, buttonText: "Updating" });
     // console.log(...formData);
     try {
-      const response = await axios.put(
-        `http://localhost:8000/api/category/${slug}`,
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.put(`/api/category/${slug}`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
       console.log(formData);
       console.log("CATEGORY UPDATE RESPONSE", response);
       setState({

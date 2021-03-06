@@ -23,9 +23,7 @@ const Links = () => {
   }, []);
 
   const fetchData = async () => {
-    const response = await axios.get(
-      `http://localhost:8000/api/category/${slug}`
-    );
+    const response = await axios.get(`/api/category/${slug}`);
 
     // info.url = response.data.image.url;
     // response.json();
@@ -45,9 +43,7 @@ const Links = () => {
 
   const handleDelete = async (slug) => {
     try {
-      const response = axios.delete(
-        `http://localhost:8000/api/category/${slug}`
-      );
+      const response = axios.delete(`/api/category/${slug}`);
       console.log("CATEGORY DELETE SUCCESS", response);
     } catch (error) {
       console.log("CATEGORY DELETE", error);
@@ -68,7 +64,7 @@ const Links = () => {
             {info.admission}
           </div>
         </div>
-        <div className="col-md-4 pt-5">
+        <div className="col-md-4">
           <img
             src={info.url}
             style={{ width: "auto", maxHeight: "500px", maxWidth: "500px" }}

@@ -29,12 +29,9 @@ const ActivateAccount = ({ router }) => {
     setState({ ...state, buttonText: "Activating" });
 
     try {
-      const res = await axios.post(
-        "http://localhost:8000/api/register/activate",
-        {
-          token,
-        }
-      );
+      const res = await axios.post("/api/register/activate", {
+        token,
+      });
       console.log("account activation response", res);
       setState({
         ...state,

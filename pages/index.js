@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios("http://localhost:8000/api/categories");
+      const response = await axios("/api/categories");
 
       setCategories(response.data);
     };

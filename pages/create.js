@@ -61,15 +61,11 @@ const Create = ({ user, token }) => {
     setState({ ...state, buttonText: "Creating" });
     // console.log(...formData);
     try {
-      const response = await axios.post(
-        `http://localhost:8000/api/category`,
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.post(`/api/category`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       console.log(formData);
       console.log("CATEGORY CREATE RESPONSE", response);
       setState({

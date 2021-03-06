@@ -39,7 +39,7 @@ const Login = () => {
     e.preventDefault();
     setState({ ...state, buttonText: "Logging in" });
     try {
-      const response = await axios.post(`http://localhost:8000/api/login`, {
+      const response = await axios.post(`/api/login`, {
         email,
         password,
       });
