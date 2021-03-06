@@ -6,7 +6,7 @@ import {
   showErrorMessage,
 } from "../../../../helpers/alerts";
 import { useState, useEffect } from "react";
-import Layout from "../../../components/layout";
+import Layout from "../../../../components/layout";
 
 const ActivateAccount = ({ router }) => {
   const [state, setState] = useState({
