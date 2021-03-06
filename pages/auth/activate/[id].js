@@ -1,7 +1,10 @@
 import { withRouter } from "next/router";
 import jwt from "jsonwebtoken";
 import axios from "axios";
-import { showSuccessMessage, showErrorMessage } from "../../../helpers/alerts";
+import {
+  showSuccessMessage,
+  showErrorMessage,
+} from "../../../../helpers/alerts";
 import { useState, useEffect } from "react";
 import Layout from "../../../components/layout";
 
